@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: reconx
+    profiles:
+      active: dev
+
+# Move this to the top level (No spaces before management)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+server:
+  port: 8080

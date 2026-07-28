@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:tradedb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: mysupersecurejwtsecretkey9876543210
+    expiration: 60000 # 1 minute
+
+logging:
+  level:
+    org.springframework.security: INFO

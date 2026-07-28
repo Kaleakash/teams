@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Product Management</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        form { margin-bottom: 30px; padding: 15px; border: 1px solid #ccc; width: 300px; }
+        .input-group { margin-bottom: 10px; }
+        label { display: block; font-weight: bold; }
+        table { border-collapse: collapse; width: 50%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+<h2>Add New Product</h2>
+<!-- Store Form -->
+<form th:action="@{/products/save}" th:object="${product}" method="post">
+    <div class="input-group">
+        <label>Product Name:</label>
+        <input type="text" th:field="*{pname}" required />
+    </div>
+    <div class="input-group">
+        <label>Price :</label>
+        <input type="text" step="0.01" th:field="*{price}" required />
+    </div>
+    <button type="submit">Save Product</button>
+</form>
+
+<h2>Product Inventory List</h2>
+<!-- Retrieve Table -->
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="prod : ${allProducts}">
+        <td th:text="${prod.pid}">1</td>
+        <td th:text="${prod.pname}">Sample Item</td>
+        <td th:text="${prod.price}">0.00</td>
+    </tr>
+    <tr th:if="${#lists.isEmpty(allProducts)}">
+        <td colspan="3" style="text-align: center;">No products found in database.</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
