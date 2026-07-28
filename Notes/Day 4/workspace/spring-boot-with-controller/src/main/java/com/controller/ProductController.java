@@ -12,11 +12,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
 @Controller
+
 public class ProductController {
+
     @Autowired
     ProductService productService;
 
     // 1. Display Form and List Products
+    // http://localhost:8080/
     @GetMapping("/")
     public String showProductPage(Model model) {
         model.addAttribute("product", new Product()); // Empty object for form data binding
@@ -26,7 +29,8 @@ public class ProductController {
 
     // 2. Handle Form Submission to Store Product
     @PostMapping("/products/save")
-    public String saveProduct(@ModelAttribute("product") Product product,Model model) {
+    public String saveProduct(@ModelAttribute("product") Product product,
+                              Model model) {
         productService.store(product);
         model.addAttribute("allProducts", productService.findAll()); // List of existing products
         return "index"; // Reloads the page to show the updated list

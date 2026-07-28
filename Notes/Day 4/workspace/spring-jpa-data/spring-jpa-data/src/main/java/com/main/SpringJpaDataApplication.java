@@ -20,6 +20,7 @@ public class SpringJpaDataApplication implements CommandLineRunner{
 
     @Autowired
     ProductService productService;
+
     @Override
     public void run(String... args) throws Exception {
         Product p1 = new Product();
@@ -32,6 +33,7 @@ public class SpringJpaDataApplication implements CommandLineRunner{
         result = productService.store(p1);
         System.out.println(result);
         result = productService.store(p2);
+        System.out.println(result);
         List<Product> listOfProduct =  productService.findAll();
         for (Product p : listOfProduct) {
             System.out.println(p);
