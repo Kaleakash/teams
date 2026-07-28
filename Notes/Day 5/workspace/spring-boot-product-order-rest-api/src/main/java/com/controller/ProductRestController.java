@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// http://localhost:8080/api/products
+
 @RestController
 @RequestMapping("/api/products")
 public class ProductRestController {
@@ -20,19 +22,19 @@ public class ProductRestController {
         this.productService = productService;
     }
 
-    @GetMapping
+    @GetMapping(value="find")
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable int id) {
         return productService.getProductById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping(value = "store")
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         Product savedProduct = productService.saveProduct(product);
         return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
