@@ -110,7 +110,87 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.12</version>
 
+            <configuration>
+                <excludes>
+
+                    <!-- Existing exclusions -->
+                    <exclude>**/*Application*</exclude>
+                    <exclude>**/config/**</exclude>
+                    <exclude>**/dto/**</exclude>
+                    <exclude>**/entity/**</exclude>
+                    <exclude>**/bean/**</exclude>
+                    <exclude>**/model/**</exclude>
+                    <exclude>**/exception/**</exclude>
+                    <exclude>**/util/**</exclude>
+                    <exclude>**/constant/**</exclude>
+
+                    <!-- Mockito / ByteBuddy generated classes -->
+                    <exclude>**/*MockitoMock*</exclude>
+                    <exclude>**/*$MockitoMock$*</exclude>
+                    <exclude>**/*$ByteBuddy$*</exclude>
+                    <exclude>**/*$auxiliary$*</exclude>
+                    <exclude>jdk/proxy*/**</exclude>
+                </excludes>
+            </configuration>
+
+            <executions>
+
+                <!-- Attach JaCoCo Agent -->
+                <execution>
+                    <id>prepare-agent</id>
+                    <goals>
+                        <goal>prepare-agent</goal>
+                    </goals>
+                </execution>
+
+                <!-- Generate HTML/XML Report -->
+                <execution>
+                    <id>report</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                </execution>
+
+                <!-- Enforce Minimum Coverage -->
+                <execution>
+                    <id>check</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
+
+                    <configuration>
+                        <rules>
+                            <rule>
+                                <element>BUNDLE</element>
+
+                                <limits>
+                                    <limit>
+                                        <counter>LINE</counter>
+                                        <value>COVEREDRATIO</value>
+                                        <minimum>0.80</minimum>
+                                    </limit>
+                                </limits>
+
+                            </rule>
+                        </rules>
+                    </configuration>
+
+                </execution>
+
+                </executions>
+            </plugin>
         </plugins>
+
+
     </build>
 </project>

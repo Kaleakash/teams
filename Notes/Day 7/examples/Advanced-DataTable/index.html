@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartMart Trade Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <h1>📈 SmartMart Trade Dashboard</h1>
+
+    </header>
+
+
+    <!-- Search Section -->
+
+    <section class="toolbar">
+
+        <div>
+
+            <label for="searchBox">
+
+                Search Trade
+
+            </label>
+
+            <input
+                type="text"
+                id="searchBox"
+                placeholder="Search by Symbol...">
+
+        </div>
+
+        <div>
+
+            <button id="refreshBtn">
+
+                Refresh
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Loading Message -->
+
+    <div id="loading">
+
+        Loading Trades...
+
+    </div>
+
+
+    <!-- No Data -->
+
+    <div id="noData">
+
+        No Trade Found
+
+    </div>
+
+
+    <!-- Table Container -->
+
+    <div class="table-container">
+
+        <table id="tradeTable">
+
+            <thead>
+
+                <tr>
+
+                    <th data-column="id">
+
+                        Trade ID ▲▼
+
+                    </th>
+
+                    <th data-column="symbol">
+
+                        Symbol ▲▼
+
+                    </th>
+
+                    <th data-column="quantity">
+
+                        Quantity ▲▼
+
+                    </th>
+
+                    <th data-column="price">
+
+                        Price ▲▼
+
+                    </th>
+
+                    <th data-column="status">
+
+                        Status ▲▼
+
+                    </th>
+
+                    <th>
+
+                        Action
+
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tableBody">
+
+                <!-- Dynamic Data -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- Pagination -->
+
+    <div class="pagination">
+
+        <button id="previousBtn">
+
+            Previous
+
+        </button>
+
+        <span id="pageInfo">
+
+            Page 1
+
+        </span>
+
+        <button id="nextBtn">
+
+            Next
+
+        </button>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        © 2026 SmartMart Dashboard
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

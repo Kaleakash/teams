@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1001,
+    "symbol": "TCS",
+    "quantity": 25,
+    "price": 3500,
+    "status": "BUY"
+  },
+  {
+    "id": 1002,
+    "symbol": "INFY",
+    "quantity": 15,
+    "price": 1550,
+    "status": "SELL"
+  },
+  {
+    "id": 1003,
+    "symbol": "WIPRO",
+    "quantity": 50,
+    "price": 280,
+    "status": "BUY"
+  },
+  {
+    "id": 1004,
+    "symbol": "HCL",
+    "quantity": 35,
+    "price": 1200,
+    "status": "PENDING"
+  },
+  {
+    "id": 1005,
+    "symbol": "RELIANCE",
+    "quantity": 12,
+    "price": 2600,
+    "status": "BUY"
+  },
+  {
+    "id": 1006,
+    "symbol": "SBI",
+    "quantity": 80,
+    "price": 790,
+    "status": "SELL"
+  },
+  {
+    "id": 1007,
+    "symbol": "ITC",
+    "quantity": 120,
+    "price": 470,
+    "status": "BUY"
+  },
+  {
+    "id": 1008,
+    "symbol": "LT",
+    "quantity": 10,
+    "price": 3700,
+    "status": "BUY"
+  },
+  {
+    "id": 1009,
+    "symbol": "ICICI",
+    "quantity": 42,
+    "price": 1150,
+    "status": "SELL"
+  },
+  {
+    "id": 1010,
+    "symbol": "HDFC",
+    "quantity": 28,
+    "price": 1720,
+    "status": "BUY"
+  },
+  {
+    "id": 1011,
+    "symbol": "AXIS",
+    "quantity": 18,
+    "price": 1125,
+    "status": "SELL"
+  },
+  {
+    "id": 1012,
+    "symbol": "MARUTI",
+    "quantity": 6,
+    "price": 9800,
+    "status": "BUY"
+  },
+  {
+    "id": 1013,
+    "symbol": "BAJAJ",
+    "quantity": 14,
+    "price": 8450,
+    "status": "BUY"
+  },
+  {
+    "id": 1014,
+    "symbol": "ONGC",
+    "quantity": 55,
+    "price": 315,
+    "status": "SELL"
+  },
+  {
+    "id": 1015,
+    "symbol": "POWERGRID",
+    "quantity": 75,
+    "price": 325,
+    "status": "BUY"
+  },
+  {
+    "id": 1016,
+    "symbol": "NTPC",
+    "quantity": 90,
+    "price": 365,
+    "status": "BUY"
+  },
+  {
+    "id": 1017,
+    "symbol": "ADANI",
+    "quantity": 20,
+    "price": 2980,
+    "status": "PENDING"
+  },
+  {
+    "id": 1018,
+    "symbol": "TATASTEEL",
+    "quantity": 100,
+    "price": 180,
+    "status": "SELL"
+  },
+  {
+    "id": 1019,
+    "symbol": "COALINDIA",
+    "quantity": 65,
+    "price": 510,
+    "status": "BUY"
+  },
+  {
+    "id": 1020,
+    "symbol": "ASIANPAINT",
+    "quantity": 8,
+    "price": 2985,
+    "status": "BUY"
+  }
+]

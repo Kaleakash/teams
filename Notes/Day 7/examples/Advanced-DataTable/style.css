@@ -1,0 +1,454 @@
+/* =====================================================
+   SMARTMART ADVANCED DATA TABLE
+   style.css
+   ===================================================== */
+
+
+/* ==============================
+   CSS Reset
+============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ==============================
+   Body
+============================== */
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+
+/* ==============================
+   Header
+============================== */
+
+.header{
+
+    background:#1976d2;
+
+    color:white;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
+
+}
+
+
+/* ==============================
+   Toolbar
+============================== */
+
+.toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+
+.toolbar label{
+
+    display:block;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+}
+
+
+.toolbar input{
+
+    width:300px;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    outline:none;
+
+}
+
+
+.toolbar input:focus{
+
+    border-color:#1976d2;
+
+    box-shadow:0 0 5px rgba(25,118,210,.4);
+
+}
+
+
+/* ==============================
+   Buttons
+============================== */
+
+button{
+
+    padding:12px 18px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:6px;
+
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* Refresh */
+
+#refreshBtn{
+
+    background:#1976d2;
+
+    color:white;
+
+}
+
+#refreshBtn:hover{
+
+    background:#125ea8;
+
+}
+
+
+/* ==============================
+   Loading
+============================== */
+
+#loading{
+
+    text-align:center;
+
+    color:#1976d2;
+
+    font-weight:bold;
+
+    padding:10px;
+
+    display:none;
+
+}
+
+
+/* ==============================
+   No Data
+============================== */
+
+#noData{
+
+    text-align:center;
+
+    color:red;
+
+    padding:20px;
+
+    display:none;
+
+}
+
+
+/* ==============================
+   Table Container
+============================== */
+
+.table-container{
+
+    padding:20px;
+
+    overflow:auto;
+
+}
+
+
+/* ==============================
+   Table
+============================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    min-width:850px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+
+}
+
+
+/* ==============================
+   Sticky Header
+============================== */
+
+thead{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+}
+
+
+thead th{
+
+    background:#1976d2;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+/* ==============================
+   Table Cells
+============================== */
+
+th,
+td{
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+
+/* ==============================
+   Hover Effect
+============================== */
+
+tbody tr:hover{
+
+    background:#f1f8ff;
+
+}
+
+
+/* ==============================
+   Status Badge
+============================== */
+
+.status{
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+
+/* BUY */
+
+.buy{
+
+    background:#28a745;
+
+}
+
+
+/* SELL */
+
+.sell{
+
+    background:#dc3545;
+
+}
+
+
+/* PENDING */
+
+.pending{
+
+    background:#ff9800;
+
+}
+
+
+/* ==============================
+   Action Buttons
+============================== */
+
+.actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:8px;
+
+}
+
+
+.view{
+
+    background:#17a2b8;
+
+    color:white;
+
+}
+
+
+.edit{
+
+    background:#ffc107;
+
+}
+
+
+.delete{
+
+    background:#dc3545;
+
+    color:white;
+
+}
+
+
+.view:hover{
+
+    background:#138496;
+
+}
+
+
+.edit:hover{
+
+    background:#d39e00;
+
+}
+
+
+.delete:hover{
+
+    background:#c82333;
+
+}
+
+
+/* ==============================
+   Pagination
+============================== */
+
+.pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin:25px;
+
+}
+
+
+.pagination button{
+
+    background:#1976d2;
+
+    color:white;
+
+}
+
+
+.pagination button:hover{
+
+    background:#125ea8;
+
+}
+
+
+/* ==============================
+   Footer
+============================== */
+
+footer{
+
+    background:#222;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:30px;
+
+}
+
+
+/* ==============================
+   Responsive Design
+============================== */
+
+@media(max-width:768px){
+
+    .toolbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .toolbar input{
+
+        width:100%;
+
+    }
+
+    .pagination{
+
+        flex-wrap:wrap;
+
+    }
+
+}
