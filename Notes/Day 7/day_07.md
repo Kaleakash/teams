@@ -1,9 +1,66 @@
 
+http://www.google.com ---> URL (Uniform resource locator)
+http/https--> protocol 
+www--> world wide web 
+google --> domain 
+com --> commercial 
+
+                            req(http/https)------------->
+
+Client                                                          Server 
+
+                <------------res(http/https)
+
+
+                                    HTML : Hyper text mark up language 
+                                       1 to 5 HTML 5 version.      
+                                    CSS : Cascading style sheet 
+                                    1,2 and 3 
+                                    types of css 
+                                    inline css 
+                                    internal or embedded css 
+                                    external css 
+bootstrap, semantic UI tailwind css etc. 
+                                    JS 
+                                    JavaScript was object based 
+                                    interpreter scripting language 
+                                    mainly use to do validation on client side in 
+                                    browser environment. 
+
+DOM : document object model 
+JS provided lot of pre defined function which help to 
+read, write and update html contents ie dom or any tag contents dynamically. 
+
+JS provided lot of pre defined library as well as framework 
+React JS 
+Angular Framework 
+Vue JS 
+etc 
+to improve dom functionality 
+
+                            From ES6 version js we can use class features. 
+
+
+After node js JS also known as client side as well as server side 
+scripting language. 
+
+Node with Express JS is like a Spring boot 
+
+
+display :
+
+by default all html tags internally follow box model 
+
+
+
 Flex layout property 
 
 What is Flexbox?
 
-Flexbox (Flexible Box Layout) is a CSS layout model used to arrange HTML elements in a single row or a single column. It automatically manages spacing, alignment, and sizing of elements, making responsive web design much easier.
+Flexbox (Flexible Box Layout) is a CSS layout model used to 
+arrange HTML elements in a single row or a single column. 
+It automatically manages spacing, alignment, and sizing of elements, 
+making responsive web design much easier.
 
 Real-world uses:
 
@@ -30,7 +87,10 @@ Footer sections
 CSS Variables (Design Tokens)
 Definition
 
-CSS Variables (also called CSS Custom Properties) are reusable values used to store colors, fonts, spacing, border radius, and other styles. They help maintain consistency across the application.
+CSS Variables (also called CSS Custom Properties) 
+are reusable values used to store colors, fonts, 
+spacing, border radius, and other styles. 
+They help maintain consistency across the application.
 
 Why Use CSS Variables?
 Write reusable CSS
@@ -39,44 +99,40 @@ Change values in one place
 Support dark/light themes
 Reduce duplicate code
 Syntax
+
 Step 1: Declare Variables
 :root{
-
     --primary-color:#1976d2;
-
     --secondary-color:#28a745;
-
     --text-color:#333333;
-
     --background-color:#f5f5f5;
-
 }
-
 Step 2: Use Variables
-
 button{
-
     background:var(--primary-color);
-
     color:white;
-
 }
+
 
 Dark & Light Theme
 Definition
 
-A Theme changes the appearance of a website without changing the HTML structure.
+A Theme changes the appearance of a website without 
+changing the HTML structure.
 
 Usually applications provide
 
 Light Theme
 Dark Theme
+
 Why Use Themes?
 Better User Experience
 Reduce Eye Strain
 User Preference
 Professional UI
+
 Syntax
+
 :root{
 
 --background:white;
@@ -86,11 +142,8 @@ Syntax
 }
 
 [data-theme="dark"]{
-
 --background:#222;
-
 --text:white;
-
 }
 
 Use Variables
