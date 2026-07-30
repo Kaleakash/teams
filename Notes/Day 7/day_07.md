@@ -207,17 +207,30 @@ Desktop
 1025px+
 
 
+
+Promise : 
+Promise is a pre defined object which is use 
+to handle asynchronous event of data. 
+
+promise can be solved (success)
+promise can be rejected (failure)
+promise in process.  
+
 Fetch API
 What is Fetch API?
 Definition
 
-The Fetch API is a modern JavaScript interface used to send HTTP requests to a server and receive data asynchronously.
+The Fetch API is a modern JavaScript 
+interface used to send HTTP requests to a server 
+and receive data asynchronously.
 
 Why Use Fetch API?
 Retrieve data from REST APIs
 Send data to the server
 Update UI dynamically
+
 Replace XMLHttpRequest
+
 HTTP Methods
 GET
 POST
