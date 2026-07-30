@@ -20,7 +20,34 @@
 // console.log("normal statement3");
 
 //fetch("").then().catch()
-fetch("https://jsonplaceholder.typicode.com/todos").
-then(response=>response.json()).then(result=>console.log(result)).
-catch(error=>console.log(error));
+// ES5 style consume rest api 
+// fetch("https://jsonplaceholder.typicode.com/todos").
+// then(response=>response.json()).then(result=>console.log(result)).
+// catch(error=>console.log(error));
+
+
+// ES6 style means new version
+async function fetchData() {
+    //let response = fetch("https://jsonplaceholder.typicode.com/todos"); // asynchronous operation
+    // await if a keyword use to make function or code as synchronous 
+    // await is replacement of then() method
+    try{
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos"); // synchronous operation
+    let result = await response.json(); // synchronous operation
+    console.log(result);
+    console.log("normal statement1");
+    console.log("normal statement2");
+    console.log("normal statement3");
+    }catch(error){
+        console.log(error);
+    }finally{
+        console.log("Promise handling completed.");
+    }
+}
+
+fetchData();
+
+
+
+
 

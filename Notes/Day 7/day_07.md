@@ -276,7 +276,8 @@ Downloading images
 
 take time.
 
-Instead of stopping the browser, JavaScript performs these operations asynchronously.
+Instead of stopping the browser, 
+JavaScript performs these operations asynchronously.
 
 Start Program
 
@@ -317,11 +318,14 @@ const response = await fetch(url);
 
 What is Server-Sent Events (SSE)?
 
-Server-Sent Events (SSE) is a technology that allows the server to continuously push data to the browser over a single HTTP connection.
+Server-Sent Events (SSE) is a technology that allows the server 
+to continuously push data to the browser over a single HTTP connection.
 
-Unlike Fetch API, where the client requests data repeatedly, SSE keeps the connection open and the server sends updates whenever new data is available.
+Unlike Fetch API, where the client requests data repeatedly, 
+SSE keeps the connection open and the server sends updates whenever new data is available.
 
 How SSE Works
+
 Browser
     │
     │ EventSource Connection
@@ -347,6 +351,7 @@ Project Structure
 
 Spring Boot Backend
 Controller
+
 @RestController
 public class NotificationController {
 
@@ -430,6 +435,7 @@ h1{
 
 }
 script.js
+
 const eventSource = new EventSource("http://localhost:8080/events");
 
 const notifications = document.getElementById("notifications");
@@ -446,6 +452,7 @@ eventSource.onerror = function(){
 
 };
 Execution Flow
+
 Browser Opens Page
         │
         ▼
@@ -466,9 +473,11 @@ Dashboard Updates Automatically
 
 What is a Data Table?
 
-A Data Table is a structured way of displaying data in rows and columns. It helps users easily view, search, sort, and manage large amounts of information.
+A Data Table is a structured way of displaying data in rows and columns. 
+It helps users easily view, search, sort, and manage large amounts of information.
 
 Real-World Examples
+
 Product List
 Customer Records
 Employee Details
@@ -477,7 +486,9 @@ Trade Dashboard
 Order History
 Why Do We Need an Advanced Data Table?
 
-A simple HTML table works for small datasets. However, enterprise applications often contain thousands of records, making it difficult to locate information.
+A simple HTML table works for small datasets. However, 
+enterprise applications often contain thousands of records, 
+making it difficult to locate information.
 
 An Advanced Data Table provides features such as:
 
